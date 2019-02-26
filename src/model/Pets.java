@@ -17,10 +17,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import org.hibernate.annotations.Table;
+import javax.persistence.Table;
 
 @Entity 
-@Table(appliesTo = "pets")
+@Table(name = "pets")
 public class Pets {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
