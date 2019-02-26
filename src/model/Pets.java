@@ -16,11 +16,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Table;
+
 
 @Entity 
-@Table(appliesTo = "pets")
+@Table(name = "pets")
 public class Pets {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
