@@ -19,10 +19,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
-
-import javax.persistence.Table;
-
-
 @Entity 
 @Table(name = "pets")
 public class Pets {
