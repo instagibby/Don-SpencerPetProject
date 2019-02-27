@@ -29,10 +29,9 @@ public class Owners {
 		super();
 	}
 	
-	//constructor with both args
-	public Owners(int ownersId, String ownersName) {
+	//constructor one arg, as the ID is auto-increment
+	public Owners(String ownersName) {
 		super();
-		this.ownersId = ownersId;
 		this.ownersName = ownersName;
 	}
 	
