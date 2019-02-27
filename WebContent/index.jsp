@@ -11,10 +11,49 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="container col-lg-9">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
 				<h1>Don and Spencer's Pet Project!</h1>
+				<hr>
+				<h4>Add a pet!</h4>
+				<form action="addPetServlet" method="post">
+					<div class="row">
+						<div class="form-group col-3">
+							<label for="name">Name:</label>
+							<input class="form-control" type="text" name="name" id="name" required>
+						</div>
+						<div class="form-group col-3">
+							<label for="breed">Breed:</label>
+							<input class="form-control" type="text" name="breed" id="breed" required>
+						</div>
+						<div class="form-group col-3">
+							<label for="gotchadate">Gotcha Date:</label>
+							<input class="form-control" type="date" name="gotchadate" id="gotchadate" required>
+						</div>
+						<div class="form-group col-3">
+							<label for="ownerId">Owner ID:</label>
+							<input class="form-control" type="number" name="ownerId" id="ownerId" min="0" required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<button type="submit" class="btn">Add Pet</button>					
+					</div>
+				</form>
+				<hr>
+				<h4>Add an owner!</h4>
+				<form action="addOwnerServlet" method="post">
+					<div class="row justify-content-center">					
+						<div class="form-group col-4">
+							<label for="ownerName">Owner Name:</label>
+							<input class="form-control" type="text" name="ownerName" id="ownerName" required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<button type="submit" class="btn">Add Owner</button>
+					</div>
+				</form>
+				
 			</div>
 		</div>
 	</div>
