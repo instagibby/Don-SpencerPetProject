@@ -26,7 +26,7 @@ public class ownersHelper {
 
 	public List<Owners> showAllOwners() {
 		EntityManager em = emfactory.createEntityManager();
-		List<Owners> allOwners = em.createQuery("SELECT i FROM Owners i ").getResultList();
+		List<Owners> allOwners = em.createQuery("SELECT i FROM owners i ").getResultList();
 		return allOwners;
 	}
 	

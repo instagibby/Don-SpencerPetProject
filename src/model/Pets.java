@@ -33,8 +33,8 @@ public class Pets {
 	@Column(name="GOTCHA_DATE")
 	private Date gotchaDate;
 	@ManyToOne(cascade=CascadeType.PERSIST)
-	@JoinColumn(name = "OWNERS_ID")
-	private Owners owner;
+	@JoinColumn(name = "OWNER_ID")
+	private Owners ownerId;
 	
 	//default no arg
 	public Pets() {
@@ -48,15 +48,17 @@ public class Pets {
 		this.petName = petName;
 		this.petBreed = petBreed;
 		this.gotchaDate = gotchaDate;
-		this.owner = owners;
+		this.ownerId = owners;
 	}
 	
 	//constructor for auto_incremented ids and owner info later
-	public Pets(String petName, String petBreed, Date gotchaDate) {
+	public Pets(String petName, String petBreed, Date gotchaDate, Owners owner) {
 		super();
 		this.petName = petName;
 		this.petBreed = petBreed;
 		this.gotchaDate = gotchaDate;
+		this.ownerId = owner;
+		
 	}
 
 	//getters and setters
@@ -85,17 +87,17 @@ public class Pets {
 		this.gotchaDate = gotchaDate;
 	}
 	public Owners getOwners() {
-		return owner;
+		return ownerId;
 	}
 	public void setOwners(Owners owner) {
-		this.owner = owner;
+		this.ownerId = owner;
 	}
 
 
 	@Override
 	public String toString() {
 		return "Pets [petName=" + petName + ", petBreed=" + petBreed + ", gotchaDate=" + gotchaDate + ", owner="
-				+ owner + "]";
+				+ ownerId + "]";
 	}
 	
 	

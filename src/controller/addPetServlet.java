@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Owners;
 import model.Pets;
 
 /**
@@ -35,15 +36,20 @@ public class addPetServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String breed = request.getParameter("breed");
 		String date = request.getParameter("gotchadate");
+		int oname = 1;
+		String last = request.getParameter("ownername");
 		
 		Date gotchaDate = Date.valueOf(date);
 		
+		Owners yikes = new Owners(oname,last);
 		
-		Pets meow = new Pets(name, breed, gotchaDate);
+		// Inserts Pet
+		Pets meow = new Pets(name, breed, gotchaDate, yikes);
 		petHelper ph = new petHelper();
 		ph.insertPet(meow);
 		
-		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+		
+		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 }

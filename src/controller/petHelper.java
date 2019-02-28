@@ -12,7 +12,7 @@ import model.Pets;
 
 public class petHelper {
 
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Don-SpencerPetProjectII");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Don-SpencerPetProject");
 
 	public void insertPet(Pets p) {
 		EntityManager em = emfactory.createEntityManager();

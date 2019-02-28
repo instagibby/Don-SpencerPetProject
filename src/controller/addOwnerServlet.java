@@ -33,16 +33,14 @@ public class addOwnerServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("name");
+		String name = request.getParameter("ownerName");
 		
 		
-		
-		
-		Owners yikes = new Owners(name);
+		Owners yikes = new Owners();
 		ownersHelper ph = new ownersHelper();
 		ph.insertOwner(yikes);
 		
-		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 }

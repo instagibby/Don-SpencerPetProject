@@ -32,28 +32,16 @@
 							<input class="form-control" type="date" name="gotchadate" id="gotchadate" required>
 						</div>
 						<div class="form-group col-3">
-							<label for="ownerId">Owner ID:</label>
-							<input class="form-control" type="number" name="ownerId" id="ownerId" min="0" required>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<button type="submit" class="btn">Add Pet</button>					
-					</div>
-				</form>
-				<hr>
-				<h4>Add an owner!</h4>
-				<form action="addOwnerServlet" method="post">
-					<div class="row justify-content-center">					
-						<div class="form-group col-4">
 							<label for="ownerName">Owner Name:</label>
 							<input class="form-control" type="text" name="ownerName" id="ownerName" required>
 						</div>
 					</div>
 					<div class="row justify-content-center">
-						<button type="submit" class="btn">Add Owner</button>
+						<div class="form-group col-4">
+							<button type="submit" class="btn">Add!</button>					
+						</div>
 					</div>
-				</form>
-				
+				</form>				
 			</div>
 		</div>
 	</div>
