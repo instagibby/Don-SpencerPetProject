@@ -35,6 +35,12 @@ public class viewAllPetsServlet extends HttpServlet {
 			request.setAttribute("allPets", " ");
 		}
 		
+		ownersHelper oh = new ownersHelper();
+		request.setAttribute("allOwners", oh.showAllOwners());
+		if (oh.showAllOwners().isEmpty()) {
+			request.setAttribute("allOwners", " ");
+		}
+		
 		
 		
 		getServletContext().getRequestDispatcher("/Families.jsp").forward(request, response);

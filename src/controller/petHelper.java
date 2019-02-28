@@ -32,7 +32,7 @@ public class petHelper {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<Pets> typedQuery = em.createQuery(
-				"select c from Pets c where c.name = :selectedName and c.breed = :selectedBreed and c.gotchaDate = :selectedDate", Pets.class);
+				"select c from Pets c where c.petName = :selectedName and c.petBreed = :selectedBreed and c.gotchaDate = :selectedDate", Pets.class);
 		// Substitute parameter with actual data from the toDelete item
 		typedQuery.setParameter("selectedName", toDelete.getPetName());
 		typedQuery.setParameter("selectedBreed", toDelete.getPetBreed());
