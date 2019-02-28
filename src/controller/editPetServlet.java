@@ -41,9 +41,9 @@ public class editPetServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		petHelper ph = new petHelper();
-		String name = request.getParameter("name");
-		String breed = request.getParameter("breed");
-		String date = request.getParameter("gotchadate");
+		String name = request.getParameter("petName");
+		String breed = request.getParameter("petBreed");
+		String date = request.getParameter("gotchaDate");
 		
 		Date gotchaDate = Date.valueOf(date);
 		
