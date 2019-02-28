@@ -46,16 +46,18 @@
 				</div>
 				</div>
 				
-				<div class="col-12" style="text-align: center;">
-				<d:forEach items="${requestScope.allOwners}" var="currentowner">
-					<h3>${currentowner.name } has id: ${currentowner.ownersId }</h3>
-					
-				</d:forEach>
-				</div>
+				
 					
 			</div>
 		</form>
 		</c:forEach>
+		<div class="col-12" style="text-align: center;">
+				<d:forEach items="${requestScope.allOwners}" var="currentowner">
+					<p>${currentowner.name } has id: ${currentowner.ownersId }</p>
+					
+				</d:forEach>
+				</div>
+		
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

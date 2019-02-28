@@ -37,7 +37,7 @@ public class addPetServlet extends HttpServlet {
 		String breed = request.getParameter("breed");
 		String date = request.getParameter("gotchadate");
 		int oname = 1;
-		String last = request.getParameter("ownername");
+		String last = request.getParameter("ownerName");
 		
 		Date gotchaDate = Date.valueOf(date);
 		
