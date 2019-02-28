@@ -53,7 +53,7 @@
 						<button type="submit" class="btn">Add Owner</button>
 					</div>
 				</form>
-				<a href="viewAllPetsServlet">See All Families</a>
+				
 			</div>
 		</div>
 	</div>

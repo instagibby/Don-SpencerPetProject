@@ -34,6 +34,9 @@ public class viewAllPetsServlet extends HttpServlet {
 		if (ph.showAllPets().isEmpty()) {
 			request.setAttribute("allPets", " ");
 		}
+		
+		
+		
 		getServletContext().getRequestDispatcher("/Families.jsp").forward(request, response);
 	}
 
