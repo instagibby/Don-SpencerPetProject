@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Don & Spencer Project</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,15 +13,24 @@
 <body>
 	<div class="container col-lg-9">
 		<div class="row">
-		<c:forEach items="${requestScope.owners}" var="currentowner">			 	
+		<c:forEach items="${requestScope.allPets}" var="currentpet">			 	
 		 	<div class="col-md-4" style="text-align: center;">
 			<div class='card'>
 	          <div class='info'>
-	            <h2 class='title'>${currentowner.name}</h2>
+	            <h2 class='title'></h2>
 	            <p class='description'>
-	            	${currentowner.birthday}
-	           		${currentowner.catoverlordId}
+	            	${currentpet.petId}
 	            </p>
+	            <p class='description'>
+	            	${currentpet.petName}
+	            </p>
+	            <p class='description'>
+	            	${currentpet.gotchaDate} 		
+	            </p>
+	            <p class='description'>
+	            	${currentpet.owner}	
+	            </p>
+	            
 	          </div>
 	        </div>
 			</div>

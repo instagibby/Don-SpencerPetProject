@@ -12,7 +12,7 @@ import model.Pets;
 
 public class petHelper {
 
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Don-SpencerPetProject");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Don-SpencerPetProjectII");
 
 	public void insertPet(Pets p) {
 		EntityManager em = emfactory.createEntityManager();
@@ -24,7 +24,7 @@ public class petHelper {
 
 	public List<Pets> showAllPets() {
 		EntityManager em = emfactory.createEntityManager();
-		List<Pets> allPets = em.createQuery("SELECT i FROM Pets i").getResultList();
+		List<Pets> allPets = em.createQuery("SELECT i FROM pets i").getResultList();
 		return allPets;
 	}
 
