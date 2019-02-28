@@ -41,7 +41,8 @@
 							<button type="submit" class="btn">Add!</button>					
 						</div>
 					</div>
-				</form>				
+				</form>
+				<p><a href = "viewAllPetsServlet">View the complete list of pets</a></p>			
 			</div>
 		</div>
 	</div>

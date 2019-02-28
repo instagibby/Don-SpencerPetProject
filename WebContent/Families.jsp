@@ -25,10 +25,13 @@
 	            	${currentpet.petName}
 	            </p>
 	            <p class='description'>
+	            	${currentpet.petBreed} 		
+	            </p>
+	            <p class='description'>
 	            	${currentpet.gotchaDate} 		
 	            </p>
 	            <p class='description'>
-	            	${currentpet.owner}	
+	            		
 	            </p>
 	            
 	          </div>

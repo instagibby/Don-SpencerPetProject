@@ -24,7 +24,7 @@ public class petHelper {
 
 	public List<Pets> showAllPets() {
 		EntityManager em = emfactory.createEntityManager();
-		List<Pets> allPets = em.createQuery("SELECT i FROM pets i").getResultList();
+		List<Pets> allPets = em.createQuery("SELECT i FROM Pets i").getResultList();
 		return allPets;
 	}
 
