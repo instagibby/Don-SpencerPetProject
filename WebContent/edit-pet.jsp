@@ -15,7 +15,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" style="text-align: center;">
-
+				<h1>Edit A Pet's Info</h1>
+				<hr>
 				<form action="editPetServlet" method="post">
 					<div class="row">
 						<div class="form-group col-3">
