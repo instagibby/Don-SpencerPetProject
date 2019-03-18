@@ -21,34 +21,43 @@ public class Owners {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="OWNERS_ID")
 	private int ownersId;
-	@Column(name="OWNERS_NAME")
-	private String ownersName;
+	@Column(name="NAME")
+	private String name;
 	
 	//default no args
 	public Owners() {
 		super();
 	}
 	
-	//constructor with both args
-	public Owners(int ownersId, String ownersName) {
-		super();
-		this.ownersId = ownersId;
-		this.ownersName = ownersName;
-	}
 	
-	//getters and setters
+	public Owners(int ownersName, String name) {
+		super();
+		this.name = name;
+		this.ownersId = ownersName;
+	}
+
+
 	public int getOwnersId() {
 		return ownersId;
 	}
+
+
 	public void setOwnersId(int ownersId) {
 		this.ownersId = ownersId;
 	}
-	public String getOwnersName() {
-		return ownersName;
+
+
+	public String getName() {
+		return name;
 	}
-	public void setOwnersName(String ownersName) {
-		this.ownersName = ownersName;
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
+	
+	//getters and setters
+	
 	
 	
 	

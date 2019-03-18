@@ -6,7 +6,7 @@ package model;
  * Pet Project using .gitignore file
  */
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,11 +16,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-import org.hibernate.annotations.Table;
 
 @Entity 
-@Table(appliesTo = "pets")
+@Table(name = "pets")
 public class Pets {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,10 +31,10 @@ public class Pets {
 	@Column(name="PET_BREED")
 	private String petBreed;
 	@Column(name="GOTCHA_DATE")
-	private LocalDate gotchaDate;
+	private Date gotchaDate;
 	@ManyToOne(cascade=CascadeType.PERSIST)
-	@JoinColumn(name = "OWNERS_ID")
-	private Owners owners;
+	@JoinColumn(name = "OWNER_ID")
+	private Owners ownerId;
 	
 	//default no arg
 	public Pets() {
@@ -42,21 +42,23 @@ public class Pets {
 	}
 	
 	//all the args we could ever want
-	public Pets(int petId, String petName, String petBreed, LocalDate gotchaDate, Owners owners) {
+	public Pets(int petId, String petName, String petBreed, Date gotchaDate, Owners owners) {
 		super();
 		this.petId = petId;
 		this.petName = petName;
 		this.petBreed = petBreed;
 		this.gotchaDate = gotchaDate;
-		this.owners = owners;
+		this.ownerId = owners;
 	}
 	
 	//constructor for auto_incremented ids and owner info later
-	public Pets(String petName, String petBreed, LocalDate gotchaDate) {
+	public Pets(String petName, String petBreed, Date gotchaDate, Owners owner) {
 		super();
 		this.petName = petName;
 		this.petBreed = petBreed;
 		this.gotchaDate = gotchaDate;
+		this.ownerId = owner;
+		
 	}
 
 	//getters and setters
@@ -78,24 +80,24 @@ public class Pets {
 	public void setPetBreed(String petBreed) {
 		this.petBreed = petBreed;
 	}
-	public LocalDate getGotchaDate() {
+	public Date getGotchaDate() {
 		return gotchaDate;
 	}
-	public void setGotchaDate(LocalDate gotchaDate) {
+	public void setGotchaDate(Date gotchaDate) {
 		this.gotchaDate = gotchaDate;
 	}
 	public Owners getOwners() {
-		return owners;
+		return ownerId;
 	}
-	public void setOwners(Owners owners) {
-		this.owners = owners;
+	public void setOwners(Owners owner) {
+		this.ownerId = owner;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Pets [petName=" + petName + ", petBreed=" + petBreed + ", gotchaDate=" + gotchaDate + ", owners="
-				+ owners + "]";
+		return "Pets [petName=" + petName + ", petBreed=" + petBreed + ", gotchaDate=" + gotchaDate + ", owner="
+				+ ownerId + "]";
 	}
 	
 	

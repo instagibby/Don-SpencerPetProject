@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `owners`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `owners` (
   `owners_id` int(11) NOT NULL AUTO_INCREMENT,
-  `owners_name` varchar(45) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`owners_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,6 +35,7 @@ CREATE TABLE `owners` (
 
 LOCK TABLES `owners` WRITE;
 /*!40000 ALTER TABLE `owners` DISABLE KEYS */;
+INSERT INTO `owners` VALUES (14,'Spencer'),(15,'Claire');
 /*!40000 ALTER TABLE `owners` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,9 +51,9 @@ CREATE TABLE `pets` (
   `pet_name` varchar(45) NOT NULL,
   `pet_breed` varchar(45) NOT NULL,
   `gotcha_date` date NOT NULL,
-  `owner_id` int(11) NOT NULL,
+  `owner_id` int(5) NOT NULL,
   PRIMARY KEY (`pet_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,6 +62,7 @@ CREATE TABLE `pets` (
 
 LOCK TABLES `pets` WRITE;
 /*!40000 ALTER TABLE `pets` DISABLE KEYS */;
+INSERT INTO `pets` VALUES (13,'Momo','Tabby','2019-03-02',14),(14,'Ro','Calico','2017-06-01',15);
 /*!40000 ALTER TABLE `pets` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -73,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-20 22:06:34
+-- Dump completed on 2019-02-28  3:28:01
